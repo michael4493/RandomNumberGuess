@@ -1,20 +1,20 @@
 import random
 
-answer = random.randint(1, 100)
 
-attempts = 0
+a = int(input("Input the minimum of the number: "))
+b = int(input("Input the maximum of the number: "))
+answer = random.randint(a, b)
+attempt = 0
 
-print("Welcome to guess number, a random number between 1 and 100 has generated!")
 
 while True:
-    guess = int(input("Make a guess: "))
-
-    attempts += 1
-
+    guess = int(input("Input your guess number: "))
+    attempt += 1
     if guess > answer:
         print("Smaller!")
     elif guess < answer:
         print("Bigger!")
     else:
-        print(f"Congratualation! You hit the correct answer! You just made {attempts} attempts!")
+        print("You hit the correct number!")
+        print(f"You just made {attempt} guesses to hit the answer!")
         break
